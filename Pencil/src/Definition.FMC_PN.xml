@@ -1,0 +1,52 @@
+<Shapes xmlns="http://www.evolus.vn/Namespace/Pencil"
+    xmlns:p="http://www.evolus.vn/Namespace/Pencil"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+
+    id="fmcPN"
+    displayName="FMC Petri Net"
+    description="FMC Stencils for Petri Nets"
+    author="Bernhard Groene, Savio Dimatteo"
+    url="https://github.com/f-m-c/FMCshapes/Pencil">
+
+    <!-- include includes/Properties.xml -->
+
+    <Script>
+        <![CDATA[
+        // Old Versions
+
+        // Common
+        collection.calculateHorVertLinePoints  = /* includeJS includes/functions/calculateHorVertLinePoints.js */;
+        collection.calculateHorVertControlConstraints  = /* includeJS includes/functions/calculateHorVertControlConstraints.js */;
+        collection.arrowheadCreateSVG = /* includeJS includes/functions/arrowheadCreateSVG.js */;
+        collection.arrowheadDetermineFill = /* includeJS includes/functions/arrowheadDetermineFill.js */;
+        collection.createSVGLineThroughPoints = /* includeJS includes/functions/createSVGLineThroughPoints.js */;
+        collection.getPointOnLine = /* includeJS includes/functions/getPointOnLine.js */;
+
+        // for PNnop_Vxxx.xml
+        collection.generateOutletsBetween = /* includeJS includes/functions/generateOutletsBetween.js */;
+        collection.divideSegment = /* includeJS includes/functions/divideSegment.js */;
+
+        ]]>
+    </Script>
+
+
+<!-- System ( invisible ) -->
+    <!-- include includes/shapes/AllDHorVertLine_V002.xml -->
+    <!-- include includes/shapes/AllDRoundedRectangle_V002.xml -->
+
+<!-- Main Shapes ( visible ) -->
+    <!-- include includes/shapes/PNTransition_V002.xml -->
+    <!-- include includes/shapes/PNPlace_V002.xml -->
+    <!-- include includes/shapes/PNFlowVertical_V002.xml -->
+    <!-- include includes/shapes/PNFlowHorizontalMulti_V002.xml -->
+    <!-- include includes/shapes/PNFlowVerticalMulti_V002.xml -->
+    <!-- include includes/shapes/PNFlowHorizontalLoopT_V002.xml -->
+    <!-- include includes/shapes/PNFlowHorizontalLoopB_V002.xml -->
+    <!-- include includes/shapes/AnnLane_V002.xml -->
+    <!-- include includes/shapes/PNLaneMultiVertical_V002.xml -->
+    <!-- include includes/shapes/AnnLaneHorizontal_V002.xml -->
+    <!-- include includes/shapes/PNnop_V002.xml -->
+
+<!-- old versions to keep compatibility -->
+</Shapes>

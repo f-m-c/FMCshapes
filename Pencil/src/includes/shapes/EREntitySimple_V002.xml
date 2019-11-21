@@ -1,0 +1,3 @@
+<Shortcut displayName="Entity (simple)" icon="icons/rectangle.png" to="EREntity_V002">
+    <PropertyValue name="ENUMshowCompartments">none</PropertyValue>
+</Shortcut>

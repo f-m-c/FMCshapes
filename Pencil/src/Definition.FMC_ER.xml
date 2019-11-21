@@ -1,0 +1,42 @@
+<Shapes xmlns="http://www.evolus.vn/Namespace/Pencil"
+    xmlns:p="http://www.evolus.vn/Namespace/Pencil"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+
+    id="fmcER"
+    displayName="FMC Entity/Relationship Diagram"
+    description="FMC Stencils for Entity/Relationship Diagrams"
+    author="Bernhard Groene, Savio Dimatteo"
+    url="https://github.com/f-m-c/FMCshapes/Pencil">
+
+    <!-- include includes/Properties.xml -->
+
+    <Script>
+        <![CDATA[
+        // Old Versions
+        collection.calculateHorVertLinePoints_V001  = /* includeJS includes/functions/old/calculateHorVertLinePoints_V001.js */;
+
+        // Common
+        collection.calculateHorVertLinePoints  = /* includeJS includes/functions/calculateHorVertLinePoints.js */;
+        collection.calculateHorVertControlConstraints  = /* includeJS includes/functions/calculateHorVertControlConstraints.js */;
+        collection.arrowheadCreateSVG = /* includeJS includes/functions/arrowheadCreateSVG.js */;
+        collection.arrowheadDetermineFill = /* includeJS includes/functions/arrowheadDetermineFill.js */;
+        collection.createSVGLineThroughPoints = /* includeJS includes/functions/createSVGLineThroughPoints.js */;
+        collection.getPointOnLine = /* includeJS includes/functions/getPointOnLine.js */;
+
+        ]]>
+    </Script>
+<!-- System ( invisible ) -->
+    <!-- include includes/shapes/ERLineHorVert_V002.xml -->
+    
+<!-- Main Shapes ( visible ) -->
+    <!-- include includes/shapes/EREntity_V002.xml -->
+    <!-- include includes/shapes/EREntitySimple_V002.xml -->
+    <!-- include includes/shapes/ERRelationVertical_V002.xml -->
+    <!-- include includes/shapes/ERRelationHorizontal_V002.xml -->
+    <!-- include includes/shapes/ERRelationHorizontalMulti_V002.xml -->
+    <!-- include includes/shapes/ERRelationVerticalMulti_V002.xml -->
+
+<!-- old versions to keep compatibility -->
+
+</Shapes>
