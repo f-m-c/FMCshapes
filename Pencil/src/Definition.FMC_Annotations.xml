@@ -1,0 +1,56 @@
+<Shapes xmlns="http://www.evolus.vn/Namespace/Pencil"
+    xmlns:p="http://www.evolus.vn/Namespace/Pencil"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+
+    id="fmcAnnot"
+    displayName="FMC Annotations"
+    description="FMC Stencils for Annotations"
+    author="Bernhard Groene, Savio Dimatteo"
+    url="https://github.com/f-m-c/FMCshapes/Pencil">
+
+    <!-- include includes/Properties.xml -->
+
+    <Script>
+        <![CDATA[
+        // Old Versions
+
+        // Common
+        collection.calculateHorVertLinePoints  = /* includeJS includes/functions/calculateHorVertLinePoints.js */;
+        collection.calculateHorVertControlConstraints  = /* includeJS includes/functions/calculateHorVertControlConstraints.js */;
+        collection.arrowheadCreateSVG = /* includeJS includes/functions/arrowheadCreateSVG.js */;
+        collection.arrowheadDetermineFill = /* includeJS includes/functions/arrowheadDetermineFill.js */;
+        collection.createSVGLineThroughPoints = /* includeJS includes/functions/createSVGLineThroughPoints.js */;
+        collection.getPointOnLine = /* includeJS includes/functions/getPointOnLine.js */;
+
+        // for AnnLegend_Vxxx.xml
+        collection.parseLegendText = /* includeJS includes/functions/parseLegendText.js */;
+
+        ]]>
+    </Script>
+
+    <!-- System ( invisible ) -->
+      <!-- include includes/shapes/AllDHorVertLine_V002.xml -->
+      <!-- include includes/shapes/AllDRoundedRectangle_V002.xml -->
+      <!-- include includes/shapes/AllDDirectLine_V002.xml -->
+
+    <!-- Active ( visible ) -->
+      <!-- include includes/shapes/AnnPlainText_V002.xml -->
+      <!-- include includes/shapes/AnnRectangle_V002.xml -->
+      <!-- include includes/shapes/AnnRectangleRounded_V002.xml -->
+      <!-- include includes/shapes/AnnLineVertical_V002.xml -->
+      <!-- include includes/shapes/AnnLineHorizontal_V002.xml -->
+      <!-- include includes/shapes/AnnLineDirect_V002.xml -->
+      <!-- include includes/shapes/AnnLineVerticalMulti_V002.xml -->
+      <!-- include includes/shapes/AnnLineHorizontalMulti_V002.xml -->
+      <!-- include includes/shapes/AnnArrowDirectDashed_V002.xml -->
+      <!-- include includes/shapes/AnnNote_V002.xml -->
+      <!-- include includes/shapes/AnnGroupCFA_V002.xml -->
+      <!-- include includes/shapes/AnnDots_V002.xml -->
+      <!-- include includes/shapes/AnnDotsVertical_V002.xml -->
+      <!-- include includes/shapes/AnnLane_V002.xml -->
+      <!-- include includes/shapes/AnnLaneHorizontal_V002.xml -->
+      <!-- include includes/shapes/AnnLegend_V002.xml -->
+
+    <!-- old versions to keep compatibility ( invisible ) -->
+</Shapes>

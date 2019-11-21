@@ -1,0 +1,22 @@
+{
+  "name": "fmc-pencil-stencils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node build.js",
+    "dist": "cd build && for f in $(find . -depth 1 -type d | grep -v icons); do cd ${f}; zip -r ../../dist/${f}.zip .; cd -; done"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Savio Dimatteo, Bernhard Groene",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.16.0"
+  },
+  "dependencies": {
+    "fs-extra": "^7.0.1"
+  }
+}
