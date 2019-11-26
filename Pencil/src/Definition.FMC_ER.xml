@@ -14,7 +14,6 @@
     <Script>
         <![CDATA[
         // Old Versions
-        collection.calculateHorVertLinePoints_V001  = /* includeJS includes/functions/old/calculateHorVertLinePoints_V001.js */;
 
         // Common
         collection.calculateHorVertLinePoints  = /* includeJS includes/functions/calculateHorVertLinePoints.js */;
