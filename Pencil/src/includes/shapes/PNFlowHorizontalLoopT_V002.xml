@@ -3,6 +3,7 @@
     <PropertyValue name="ENUMarrowStyleStart">none</PropertyValue>
     <PropertyValue name="ENUMarrowStyleEnd">full</PropertyValue>
     <PropertyValue name="BOOLhasExtensionA">true</PropertyValue>
+    <PropertyValue name="BOOLallowDiagonalExtA">true</PropertyValue>
     <PropertyValue name="BOOLisExtADiagonal">true</PropertyValue>
     <PropertyValue name="BOOLhasExtensionB">true</PropertyValue>
     <PropertyValue name="HNDLp1">0,40</PropertyValue>

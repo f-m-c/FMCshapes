@@ -2,6 +2,7 @@
     <PropertyValue name="BOOLisHorizontal">false</PropertyValue>
     <PropertyValue name="ENUMarrowStyleStart">none</PropertyValue>
     <PropertyValue name="ENUMarrowStyleEnd">full</PropertyValue>
+    <PropertyValue name="BOOLallowDiagonalExtA">true</PropertyValue>
     <PropertyValue name="BOOLhasExtensionA">true</PropertyValue>
     <PropertyValue name="BOOLhasExtensionB">true</PropertyValue>
     <PropertyValue name="HNDLp1">0,0</PropertyValue>
