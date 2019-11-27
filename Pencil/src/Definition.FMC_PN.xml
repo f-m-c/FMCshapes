@@ -38,15 +38,17 @@
 <!-- Main Shapes ( visible ) -->
     <!-- include includes/shapes/PNTransition_V002.xml -->
     <!-- include includes/shapes/PNPlace_V002.xml -->
+    <!-- include includes/shapes/PNPlaceMarked_V002.xml -->
     <!-- include includes/shapes/PNFlowVertical_V002.xml -->
     <!-- include includes/shapes/PNFlowHorizontalMulti_V002.xml -->
     <!-- include includes/shapes/PNFlowVerticalMulti_V002.xml -->
     <!-- include includes/shapes/PNFlowHorizontalLoopT_V002.xml -->
     <!-- include includes/shapes/PNFlowHorizontalLoopB_V002.xml -->
+    <!-- include includes/shapes/PNnop_V002.xml -->
+    <!-- include includes/shapes/PNnopVertical_V002.xml -->
     <!-- include includes/shapes/AnnLane_V002.xml -->
     <!-- include includes/shapes/PNLaneMultiVertical_V002.xml -->
     <!-- include includes/shapes/AnnLaneHorizontal_V002.xml -->
-    <!-- include includes/shapes/PNnop_V002.xml -->
 
 <!-- old versions to keep compatibility -->
 </Shapes>
