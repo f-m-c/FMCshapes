@@ -1,48 +1,41 @@
-<Shape id="PNPlace_V002" displayName="Place" icon="icons/end-of-activity.png">
+<Shape id="PNPlace_V002" displayName="Place" icon="icons/circle.png">
     <Properties>
         <PropertyGroup name="Properties">
-            <Property name="box" p:disabled="true" type="Dimension">30,30</Property>
+            <Property name="ENUMsize"  displayName="Place size"
+                p:enumValues="['20|20', '25|25', '30|30', '35|35', '40|40']"
+                type="Enum">25</Property>
             <Property name="BOOLmarked" displayName="Marked" type="Bool">false</Property>
+            <Property name="fillColor" displayName="Background Color" type="Color"><E>$$defaultBackgroundColor</E></Property>
             <Property name="strokeColor" displayName="Line Color" type="Color"><E>$$defaultStrokeColor</E></Property>
             <Property name="strokeStyle" displayName="Line Style" type="StrokeStyle"><E>$$defaultNodeStrokeStyle</E></Property>
             <Property name="COLtokenColor" displayName="Token Color" p:disabled="$BOOLmarked.value == false" type="Color"><E>$$defaultStrokeColor</E></Property>
         </PropertyGroup>
+        <PropertyGroup name="Text">
+            <Property name="HNDLtextPos" p:disabled="$TTXTtextContent.value.length == 0" displayName="Text Position" type="Handle">40,-5</Property>
+            <Property name="TTXTtextContent" displayName="Content"
+              p:editInfo="var targetBox = F.getObjectBoundingBox('text'); var sizeBox = F.textSize('text'); var newBox = new Bound(targetBox.x, targetBox.y + ((sizeBox.h / 2) - 10), Math.sqrt((sizeBox.w * sizeBox.w) + (sizeBox.h * sizeBox.h)) + 10 , 20); ({targetName: 'text', bound: newBox , font: $textFont, align: $ALGNtextAlignment, multi: true})"
+              type="PlainText" />
+            <Property name="textColor" displayName="Text Color" type="Color"><E>$$defaultTextColor</E></Property>
+            <Property name="textFont" displayName="Font" type="Font"><E>$$defaultTextFont</E></Property>
+            <Property name="ALGNtextAlignment" displayName="Text Alignment" type="Alignment">0,1</Property>
+        </PropertyGroup>
     </Properties>
-    <Actions>
-        <Action id="getConnectorOutlets">
-            <Impl>
-                <![CDATA[
-                var box = this.getProperty("box");
-                return [
-                    new Outlet("top-center", "Bounding", box.w/2, 0),
-                    new Outlet("right-top", "Bounding", box.w*0.85, box.h*0.15),
-                    new Outlet("right-center", "Bounding", box.w, box.h/2),
-                    new Outlet("right-bottom", "Bounding", box.w*0.85, box.h*0.85),
-                    new Outlet("bottom-center", "Bounding", box.w/2, box.h),
-                    new Outlet("left-bottom", "Bounding", box.w*0.15, box.h*0.85),
-                    new Outlet("left-center", "Bounding", 0, box.h/2),
-                    new Outlet("left-top", "Bounding", box.w*0.15, box.h*0.15)
-                    ];
-                ]]>
-            </Impl>
-        </Action>
-    </Actions>
     <Behaviors>
         <For ref="outCircle">
             <Attr>
                 <Arg>"cx"</Arg>
-                <Arg>$box.w/2</Arg>
+                <Arg>$ENUMsize.value/2</Arg>
             </Attr>
             <Attr>
                 <Arg>"cy"</Arg>
-                <Arg>$box.h/2</Arg>
+                <Arg>$ENUMsize.value/2</Arg>
             </Attr>
-            <Radius>
-                <Arg>$box.w</Arg>
-                <Arg>$box.h</Arg>
-            </Radius>
+            <Attr>
+                <Arg>"r"</Arg>
+                <Arg>$ENUMsize.value/2</Arg>
+            </Attr>
             <Fill>
-              Color.fromString("#ffffffff");
+              $fillColor
             </Fill>
             <StrokeColor>$strokeColor</StrokeColor>
             <StrokeStyle>$strokeStyle</StrokeStyle>
@@ -50,30 +43,59 @@
         <For ref="inCircle">
             <Attr>
                 <Arg>"cx"</Arg>
-                <Arg>$box.w/2</Arg>
+                <Arg>$ENUMsize.value/2</Arg>
             </Attr>
             <Attr>
                 <Arg>"cy"</Arg>
-                <Arg>$box.h/2</Arg>
+                <Arg>$ENUMsize.value/2</Arg>
+            </Attr>
+            <Attr>
+                <Arg>"r"</Arg>
+                <Arg>$ENUMsize.value/4</Arg>
             </Attr>
             <StrokeStyle>StrokeStyle.fromString("0|")</StrokeStyle>
+            <Fill>
+                $COLtokenColor
+            </Fill>
             <Visibility>$BOOLmarked.value</Visibility>
         </For>
+        <For ref="text">
+            <DomContent>F.buildTextWrapDomContent(F._target, $TTXTtextContent.value, 300, $ALGNtextAlignment)</DomContent>
+            <Font>$textFont</Font>
+            <Color>$textColor</Color>
+            <Transform>[translate(parseFloat($HNDLtextPos.x) - $ALGNtextAlignment.h * 150, $HNDLtextPos.y)]</Transform>
+        </For>
     </Behaviors>
+    <Actions>
+        <Action id="getConnectorOutlets">
+            <Impl>
+                <![CDATA[
+                var size = this.getProperty("ENUMsize").value;
+                return [
+                    new Outlet("top-center", "Bounding", size/2, 0),
+                    new Outlet("right-top", "Bounding", size*0.85, size*0.15),
+                    new Outlet("right-center", "Bounding", size, size/2),
+                    new Outlet("right-bottom", "Bounding", size*0.85, size*0.85),
+                    new Outlet("bottom-center", "Bounding", size/2, size),
+                    new Outlet("left-bottom", "Bounding", size*0.15, size*0.85),
+                    new Outlet("left-center", "Bounding", 0, size/2),
+                    new Outlet("left-top", "Bounding", size*0.15, size*0.15)
+                    ];
+                ]]>
+            </Impl>
+        </Action>
+    </Actions>
     <p:Content xmlns:p="http://www.evolus.vn/Namespace/Pencil"
                xmlns="http://www.w3.org/2000/svg">
 
         <circle
            id="outCircle"
-           r="15" />
+            />
 
         <circle
            id="inCircle"
-           style="color:#000000"
-           r="8" />
-
-        <path id="crossA" fill="none" style="stroke-linejoin: round" />
-        <path id="crossB" fill="none" style="stroke-linejoin: round" />
+            />
+        <text id="text"  xml:space="preserve"  />
 
     </p:Content>
 </Shape>

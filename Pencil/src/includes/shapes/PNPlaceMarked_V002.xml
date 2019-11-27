@@ -1,0 +1,3 @@
+<Shortcut displayName="Place, marked" icon="icons/placeMarked.png" to="PNPlace_V002">
+  <PropertyValue name="BOOLmarked">true</PropertyValue>
+</Shortcut>
