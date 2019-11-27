@@ -1,0 +1,3 @@
+<Shortcut displayName="No oper. vertical" icon="icons/nopV.png" to="PNnop_V002">
+  <PropertyValue name="box">10,40</PropertyValue>
+</Shortcut>
