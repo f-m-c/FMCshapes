@@ -1,9 +1,9 @@
-<Shape id="PNPlace_V002" displayName="Place" icon="icons/circle.png">
+<Shape id="PNPlace_V002" displayName="Place" icon="icons/placeUnmarked.png">
     <Properties>
         <PropertyGroup name="Properties">
             <Property name="ENUMsize"  displayName="Place size"
-                p:enumValues="['20|20', '25|25', '30|30', '35|35', '40|40']"
-                type="Enum">25</Property>
+                p:enumValues="['15|15', '20|20', '25|25', '30|30', '35|35', '40|40']"
+                type="Enum">20</Property>
             <Property name="BOOLmarked" displayName="Marked" type="Bool">false</Property>
             <Property name="fillColor" displayName="Background Color" type="Color"><E>$$defaultBackgroundColor</E></Property>
             <Property name="strokeColor" displayName="Line Color" type="Color"><E>$$defaultStrokeColor</E></Property>
