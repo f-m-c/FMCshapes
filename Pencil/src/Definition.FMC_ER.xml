@@ -26,15 +26,17 @@
         ]]>
     </Script>
 <!-- System ( invisible ) -->
-    <!-- include includes/shapes/ERLineHorVert_V002.xml -->
-    
+    <!-- include includes/shapes/AllDHorVertLine_V002.xml -->
+
 <!-- Main Shapes ( visible ) -->
     <!-- include includes/shapes/EREntity_V002.xml -->
     <!-- include includes/shapes/EREntitySimple_V002.xml -->
+    <!-- include includes/shapes/ERRelationHorVert_V002.xml -->
     <!-- include includes/shapes/ERRelationVertical_V002.xml -->
-    <!-- include includes/shapes/ERRelationHorizontal_V002.xml -->
-    <!-- include includes/shapes/ERRelationHorizontalMulti_V002.xml -->
-    <!-- include includes/shapes/ERRelationVerticalMulti_V002.xml -->
+    <!-- include includes/shapes/AnnLineVertical_V002.xml -->
+    <!-- include includes/shapes/AnnLineHorizontal_V002.xml -->
+    <!-- include includes/shapes/AnnLineVerticalMulti_V002.xml -->
+    <!-- include includes/shapes/AnnLineHorizontalMulti_V002.xml -->
 
 <!-- old versions to keep compatibility -->
 
