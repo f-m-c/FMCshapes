@@ -51,9 +51,9 @@ import argparse
 
 parser = argparse.ArgumentParser(description="build pencil collections from includes")
 parser.add_argument("-v", "--verbose", help="Show more info", action="store_true")
-parser.add_argument("--nobuild", help="Don't build Definition.xml", action="store_true")
-parser.add_argument("--noicons", help="Don't copy icons", action="store_true")
-parser.add_argument("--nozip", help="Don't create collection zip archives", action="store_true")
+parser.add_argument("--nobuild", help="Don't build Definition.xml", action="store_true", default=False)
+parser.add_argument("--noicons", help="Don't copy icons", action="store_true", default=False)
+parser.add_argument("--nozip", help="Don't create collection zip archives", action="store_true", default=False)
 args = parser.parse_args()
 
 S_DEBUG=args.verbose
@@ -69,7 +69,7 @@ S_DEFINITIONS_SRC_FILENAME_RE = "Definition\.([^.]+)\.xml"
 S_FILE_INCLUDE_RE = "<!-- include ([^ ]+) -->"
 S_JSFILE_INCLUDE_RE = "/\* includeJS ([^ ]+) \*/"
 S_JSFILE_MODEXP_RE = "module\.exports = ([^;]+);"
-S_ICON_RE = 'icon=\"(icons/[^\"]+)\" '
+S_ICON_RE = 'icon=\"(icons/[^\"]+)\"'
 S_ICONS_DIR = "icons"
 
 def replace_includes(s_definitionFileName, s_baseDir):
