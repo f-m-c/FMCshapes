@@ -2,11 +2,17 @@
     <Properties>
         <PropertyGroup name="Rectangle">
             <Property name="box" type="Dimension">150,50</Property>
-            <Property name="BOOLallowRoundedCorners" p:disabled="true" displayName="AllowRoundedCorners" type="Bool">true</Property>
-            <Property name="BOOLhasRoundedCorners" p:disabled="$BOOLallowRoundedCorners.value === false" displayName="Rounded Corners" type="Bool">true</Property>
-            <Property name="BOOLallowMultiple" p:disabled="true" displayName="AllowMultiple" type="Bool">false</Property>
-            <Property name="BOOLisMultiple" p:disabled="$BOOLallowMultiple.value === false" displayName="Multiple" type="Bool">false</Property>
-            <Property name="HNDLcornerRadius" p:disabled="$BOOLhasRoundedCorners.value === false" p:minX="10" p:maxX="50" p:lockY="true" displayName="Corner Radius" type="Handle"><E>$$defaultCornerRadius + ",0"</E></Property>
+            <Property name="BOOLallowRoundedCorners" p:disabled="true" 
+                displayName="AllowRoundedCorners" type="Bool">true</Property>
+            <Property name="BOOLhasRoundedCorners" p:disabled="$BOOLallowRoundedCorners.value === false" 
+                displayName="Rounded Corners" type="Bool">true</Property>
+            <Property name="BOOLallowMultiple" p:disabled="true" 
+                displayName="AllowMultiple" type="Bool">false</Property>
+            <Property name="BOOLisMultiple" p:disabled="$BOOLallowMultiple.value === false" 
+                displayName="Multiple" type="Bool">false</Property>
+            <Property name="HNDLcornerRadius" p:disabled="$BOOLhasRoundedCorners.value === false" 
+                p:minX="10" p:maxX="50" p:lockY="true" p:noScale="true"
+                displayName="Corner Radius" type="Handle"><E>$$defaultCornerRadius + ",0"</E></Property>
             <Property name="fillColor" displayName="Background Color" type="Color"><E>$$defaultBackgroundColor</E></Property>
             <Property name="strokeColor" displayName="Line Color" type="Color"><E>$$defaultStrokeColor</E></Property>
             <Property name="strokeStyle" displayName="Line Style" type="StrokeStyle"><E>$$defaultNodeStrokeStyle</E></Property>
