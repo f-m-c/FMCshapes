@@ -51,9 +51,9 @@ import argparse
 
 parser = argparse.ArgumentParser(description="build pencil collections from includes")
 parser.add_argument("-v", "--verbose", help="Show more info", action="store_true")
-parser.add_argument("--nobuild", help="Don't build Definition.xml", action="store_true", default=False)
-parser.add_argument("--noicons", help="Don't copy icons", action="store_true", default=False)
-parser.add_argument("--nozip", help="Don't create collection zip archives", action="store_true", default=False)
+parser.add_argument("--nobuild", help="Don't build Definition.xml", action="store_true")
+parser.add_argument("--noicons", help="Don't copy icons", action="store_true")
+parser.add_argument("--nozip", help="Don't create collection zip archives", action="store_true")
 args = parser.parse_args()
 
 S_DEBUG=args.verbose
@@ -154,12 +154,12 @@ for s_definitionFilePath in a_definitions:
                 # empty icons dir S_BUILD_DIR + "/" + s_collectionName + "/icons"
                 if S_DEBUG:
                     print(">> Delete files from Icons directory ", os.path.join(S_BUILD_DIR, s_collectionName, S_ICONS_DIR))
-                    a_icon_existingfiles = glob.glob(os.path.join(S_BUILD_DIR , s_collectionName, S_ICONS_DIR, "*"))
-                    try:
-                        for s_icon_file in a_icon_existingfiles:
-                            os.remove(s_icon_file)
-                    except OSError as e:
-                        print ("Error: %s - %s." % (e.filename, e.strerror))
+                a_icon_existingfiles = glob.glob(os.path.join(S_BUILD_DIR , s_collectionName, S_ICONS_DIR, "*"))
+                try:
+                    for s_icon_file in a_icon_existingfiles:
+                        os.remove(s_icon_file)
+                except OSError as e:
+                    print ("Error: %s - %s." % (e.filename, e.strerror))
             if S_DEBUG:
                 print(">> Copy ", len(a_icons), " Icons from ", os.path.join(S_DEFINITIONS_DIR, S_ICONS_DIR) , " to ", os.path.join(S_BUILD_DIR, s_collectionName, S_ICONS_DIR))
             for s_iconfile in a_icons:
