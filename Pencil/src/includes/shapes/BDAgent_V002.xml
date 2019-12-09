@@ -53,7 +53,7 @@
             <Fill>$fillColor</Fill>
             <StrokeColor>$strokeColor</StrokeColor>
             <StrokeStyle>$strokeStyle</StrokeStyle>
-            <Transform>[translate($HNDLhumanPos.x - 22, $HNDLhumanPos.y - 35),scale($ENUMhumanSize.value, $ENUMhumanSize.value)]</Transform>
+            <Transform>[translate($HNDLhumanPos.x, $HNDLhumanPos.y),scale($ENUMhumanSize.value, $ENUMhumanSize.value)]</Transform>
             <Visibility>$BOOLshowHuman</Visibility>
         </For>
         <For ref="leftArm">
@@ -62,10 +62,10 @@
                 switch ($ENUMmood.value) {
                     case "normal":
                     case "waving":
-                        line = "m 14.835565,21.093038 -6.6618356,0"; // arm straight
+                        line = "m 0,-1 -5,0"; // arm straight
                         break;
                     case "happy":
-                        line = "M 14.835565,21.093038 8.1737294,16.482999"; // arm up
+                        line = "m 0,-1 -5,-3"; // arm up
                         break;
                 }
                 line;
@@ -76,11 +76,11 @@
                 let line;
                 switch ($ENUMmood.value) {
                     case "normal":
-                        line = "m 21.402901,21.093038 -6.661836,0"; // arm straight
+                        line = "m 0,-1 5,0"; // arm straight
                         break;
                     case "happy":
                     case "waving":
-                        line = "m 21.402901,16.482639 -6.661836,4.610399"; // arm up
+                        line = "m 0,-1 5,-3"; // arm up
                         break;
                 }
                 line;
@@ -120,24 +120,24 @@
 
             <g id="stickman">
             <ellipse
-               style="opacity:1;fill-opacity:1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               style="opacity:1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
                id="head"
-               cx="14.835565"
-               cy="11"
-               rx="4"
-               ry="4" />
+               cx="0"
+               cy="-7.5"
+               rx="3"
+               ry="3" />
             <path
-               d="m 14.835565,30.069968 0,-14.45757"
+               d="m 0,-4.5 0,7.5"
                id="body"
                style="fill:none;fill-rule:evenodd;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
             <path
                style="fill:none;fill-rule:evenodd;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-               d="m 14.835565,30.069968 -6.6618356,6.66184"
+               d="m 0,3 -5,7"
                id="leftLeg"
                />
             <path
                style="fill:none;fill-rule:evenodd;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-               d="m 14.835565,30.069968 6.614593,6.61459"
+               d="m 0,3 5,7"
                id="rightLeg"
                />
             <path
