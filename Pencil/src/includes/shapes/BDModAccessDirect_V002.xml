@@ -74,6 +74,30 @@
                 line;
             ]]></D>
         </For>
+        <For ref="ArrowStartPath">
+            <Fill><![CDATA[
+            var arrowHeadFill = collection.arrowheadDetermineFill('full', $strokeColor);
+            arrowHeadFill;
+            ]]></Fill>
+            <StrokeColor>$strokeColor</StrokeColor>
+            <D><![CDATA[
+                var arrowHead = collection.arrowheadCreateSVG('full');
+                arrowHead;
+            ]]></D>
+            <Transform>[translate(1, 0), scale((parseFloat($strokeStyle.w)+2)/4, (parseFloat($strokeStyle.w)+2)/4)]</Transform>  
+        </For>
+        <For ref="ArrowEndPath">
+            <Fill><![CDATA[
+                var arrowHeadFill = collection.arrowheadDetermineFill('full', $strokeColor);
+                arrowHeadFill;
+            ]]></Fill>
+            <StrokeColor>$strokeColor</StrokeColor>
+            <D><![CDATA[
+                var arrowHead = collection.arrowheadCreateSVG('full');
+                arrowHead;
+            ]]></D>
+            <Transform>[rotate(180), translate(1, 0), scale((parseFloat($strokeStyle.w)+2)/4, (parseFloat($strokeStyle.w)+2)/4)]</Transform>
+        </For>
         <For ref="text">
             <DomContent>F.buildTextWrapDomContent(F._target, $TTXTtextContent.value, 300, $ALGNtextAlignment)</DomContent>
             <Font>$textFont</Font>
@@ -97,26 +121,26 @@
                orient="auto"
                refY="0.0"
                refX="0.0"
-               style="overflow:visible;">
+               style="overflow:visible;"
+               markerUnits="userSpaceOnUse">
 
                <path
                   id="ArrowEndPath"
-                  style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
-                  d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z"
-                  transform="scale(1.1) rotate(180) translate(1,0)" />
+                  style="fill-rule:evenodd;stroke-width:0.9;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
+                  />
             </marker>
             <marker
                id="ArrowStart"
                orient="auto"
                refY="0.0"
                refX="0.0"
-               style="overflow:visible;">
+               style="overflow:visible;"
+               markerUnits="userSpaceOnUse">
 
                <path
                   id="ArrowStartPath"
-                  style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
-                  d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z"
-                  transform="scale(1.1) translate(1,0)" />
+                  style="fill-rule:evenodd;stroke-width:0.9;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
+                  />
             </marker>
          </defs>
 

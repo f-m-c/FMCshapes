@@ -38,7 +38,7 @@
             var arrowHead = collection.arrowheadCreateSVG('full');
             arrowHead;
         ]]></D>
-          
+        <Transform>[translate(1, 0), scale((parseFloat($strokeStyle.w)+2)/4, (parseFloat($strokeStyle.w)+2)/4)]</Transform>  
       </For>
       <For ref="ArrowEndPath">
           <Fill><![CDATA[
@@ -50,7 +50,7 @@
             var arrowHead = collection.arrowheadCreateSVG('full');
             arrowHead;
           ]]></D>
-          
+          <Transform>[rotate(180), translate(1, 0), scale((parseFloat($strokeStyle.w)+2)/4, (parseFloat($strokeStyle.w)+2)/4)]</Transform>
       </For>
       <For ref="readCurved">
           <D><![CDATA[
@@ -110,12 +110,12 @@
                orient="auto"
                refY="0.0"
                refX="0.0"
-               style="overflow:visible;">
+               style="overflow:visible;"
+               markerUnits="userSpaceOnUse">
 
                <path
                   id="ArrowEndPath"
-                  transform="rotate(180) translate(1,0)"
-                  style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
+                  style="fill-rule:evenodd;stroke-width:0.9;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
                   />
             </marker>
             <marker
@@ -123,12 +123,12 @@
                orient="auto"
                refY="0.0"
                refX="0.0"
-               style="overflow:visible;">
+               style="overflow:visible;"
+               markerUnits="userSpaceOnUse">
 
                <path
                   id="ArrowStartPath"
-                  transform="translate(1,0)"
-                  style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
+                  style="fill-rule:evenodd;stroke-width:0.9;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
                   />
             </marker>
 

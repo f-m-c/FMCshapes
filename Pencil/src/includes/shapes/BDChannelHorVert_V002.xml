@@ -85,7 +85,8 @@
             var arrowHead = collection.arrowheadCreateSVG($ENUMarrowStyleStart.value);
             arrowHead;
         ]]></D>
-          <Visibility>$ENUMarrowStyleStart.value != 'none'</Visibility>
+        <Transform>[translate(1, 0), scale((parseFloat($strokeStyle.w)+2)/4, (parseFloat($strokeStyle.w)+2)/4)]</Transform>
+        <Visibility>$ENUMarrowStyleStart.value != 'none'</Visibility>
       </For>
       <For ref="ArrowEndPath">
           <Fill><![CDATA[
@@ -97,7 +98,7 @@
             var arrowHead = collection.arrowheadCreateSVG($ENUMarrowStyleEnd.value);
             arrowHead;
           ]]></D>
-
+          <Transform>[rotate(180), translate(1, 0), scale((parseFloat($strokeStyle.w)+2)/4, (parseFloat($strokeStyle.w)+2)/4)]</Transform>
           <Visibility>$ENUMarrowStyleEnd.value != 'none'</Visibility>
       </For>
 
@@ -150,6 +151,7 @@
                   channelCoord.ry;
                ]]></Arg>
           </Attr>
+          <Color>$strokeColor</Color>
       </For>
       <For ref="Rline1">
           <D><![CDATA[
@@ -161,7 +163,7 @@
                 ]]></D>
 
           <StrokeColor>$strokeColor</StrokeColor>
-          <StrokeStyle>$strokeStyle</StrokeStyle>
+          <StrokeStyle>StrokeStyle.fromString("1|[1]")</StrokeStyle>
           <Visibility>$ENUMdirectionType.value == 'bidirectional' || $ENUMdirectionType.value == 'other'</Visibility>
       </For>
 
@@ -175,7 +177,7 @@
                 ]]></D>
 
           <StrokeColor>$strokeColor</StrokeColor>
-          <StrokeStyle>$strokeStyle</StrokeStyle>
+          <StrokeStyle>StrokeStyle.fromString("1|[1]")</StrokeStyle>
           <Visibility>$ENUMdirectionType.value == 'bidirectional' || $ENUMdirectionType.value == 'single'</Visibility>
       </For>
       <For ref="RArrowPath">
@@ -236,12 +238,12 @@
                orient="auto"
                refY="0.0"
                refX="0.0"
-               style="overflow:visible;">
+               style="overflow:visible;"
+               markerUnits="userSpaceOnUse">
 
                <path
                   id="ArrowEndPath"
-                  transform="rotate(180) translate(1,0)"
-                  style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
+                  style="fill-rule:evenodd;stroke-width:0.9;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
                   />
             </marker>
             <marker
@@ -249,12 +251,12 @@
                orient="auto"
                refY="0.0"
                refX="0.0"
-               style="overflow:visible;">
+               style="overflow:visible;"
+               markerUnits="userSpaceOnUse">
 
                <path
                   id="ArrowStartPath"
-                  transform="translate(1,0)"
-                  style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
+                  style="fill-rule:evenodd;stroke-width:0.9;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
                   />
             </marker>
 
@@ -263,7 +265,8 @@
                orient="auto"
                refY="0.0"
                refX="0.0"
-               style="overflow:visible;">
+               style="overflow:visible;"
+               markerUnits="userSpaceOnUse">
 
                <path
                   id="RArrowPath"
