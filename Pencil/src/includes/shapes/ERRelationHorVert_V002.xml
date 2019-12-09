@@ -7,7 +7,7 @@
                 type="Enum">none</Property>
             <Property name="BOOLhasCardinalityStart" displayName="Cardinality at Start" type="Bool">false</Property>
             <Property name="BOOLhasCardinalityEnd"  displayName="Cardinality at End" type="Bool">false</Property>
-            <Property name="strokeStyleArrow" displayName="Card. Arrow Line Style" type="StrokeStyle"><E>$$defaultEdgeStrokeStyle</E></Property>
+            <Property name="strokeStyleArrow" displayName="Card. Arrow Line Style" p:disabled="true" type="StrokeStyle"><E>$$defaultEdgeStrokeStyle</E></Property>
             <Property name="box" type="Dimension">32,12</Property>
             <Property name="fillColor" displayName="Background Color" type="Color"><E>$$defaultBackgroundColor</E></Property>
             <Property name="strokeColor" displayName="Line Color" type="Color"><E>$$defaultStrokeColor</E></Property>
