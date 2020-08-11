@@ -27,7 +27,11 @@ function calculateHorVertControlConstraints (p1, p2, c3, isHorizontal, alignType
 
     var hasExtA = hasExtensionA;
     var hasExtB = hasExtensionB;
-    if (isHorizontal) {
+    if ((hasExtA && !hasExtB) || (!hasExtA && hasExtB )) {
+        // one elbow 
+        cc.inUse = false;
+    }
+if (isHorizontal) {
         // horizontal line
         if ( (hasExtA || hasExtA) && p1x > p2x - 2 * range && p1x < p2x + 2 * range) {
             // although horizontal, the start- and endpoints imply a vertical line, if too close 
@@ -46,19 +50,16 @@ function calculateHorVertControlConstraints (p1, p2, c3, isHorizontal, alignType
         if (((hasExtA && !hasExtB) || (!hasExtA && hasExtB )) && p1y > p2y - range && p1y < p2y + range) {
             // one elbow 
             // check range: If too close, convert to a line
-            cc.inUse = false;
             cc.y = (p1y + p2y) / 2;
             return cc;     
         }
         if (hasExtA && !hasExtB) {
             // one elbow vertical from start
-            cc.inUse = false;
             cc.y = p2y;
             return cc; 
         }
         if (!hasExtA && hasExtB) {
             // one elbow horizontal from start 
-            cc.inUse = false;
             cc.y = p1y;
             return cc; 
         }
@@ -101,19 +102,16 @@ function calculateHorVertControlConstraints (p1, p2, c3, isHorizontal, alignType
         if (((hasExtA && !hasExtB) || (!hasExtA && hasExtB )) && p1x > p2x - range && p1x < p2x + range) {
             // one elbow 
             // check range: If too close, convert to a line
-            cc.inUse = false;
             cc.y = (p1x + p2x) / 2;
             return cc;     
         }
         if (hasExtA && !hasExtB) {
             // one elbow horizontal from start
-            cc.inUse = false;
             cc.x = p2x;
             return cc; 
         }
         if (!hasExtA && hasExtB) {
             // one elbow vertical from start
-            cc.inUse = false;
             cc.x = p1x;
             return cc; 
         }

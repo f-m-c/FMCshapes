@@ -14,6 +14,8 @@
     <Script>
         <![CDATA[
         // Old Versions
+        collection.calculateHorVertLinePoints_V001  = /* includeJS includes/functions/old/calculateHorVertLinePoints_V001.js */;
+        collection.calculateChannelCoord_V001       = /* includeJS includes/functions/old/calculateChannelCoord_V001.js */;
 
         // Common
         collection.calculateHorVertLinePoints  = /* includeJS includes/functions/calculateHorVertLinePoints.js */;
@@ -87,11 +89,9 @@
     <!-- include includes/shapes/BDChannelHorVert_V002.xml -->
     
 <!-- Main Shapes ( visible ) -->
-    <!-- include includes/shapes/BDAgent_V002.xml -->
-    <!-- include includes/shapes/BDHumanAgent_V002.xml -->
+    <!-- include includes/shapes/BDAgent_V003.xml -->
+    <!-- include includes/shapes/BDHumanAgent_V003.xml -->
     <!-- include includes/shapes/BDStorage_V002.xml -->
-    <!-- include includes/shapes/AnnLineVertical_V002.xml -->
-    <!-- include includes/shapes/AnnLineHorizontal_V002.xml -->
     <!-- include includes/shapes/BDAccessVertical_V002.xml -->
     <!-- include includes/shapes/BDAccessVerticalMulti_V002.xml -->
     <!-- include includes/shapes/BDAccessHorizontal_V002.xml -->
@@ -102,15 +102,22 @@
     <!-- include includes/shapes/BDChannelVerticalMulti_V002.xml -->
     <!-- include includes/shapes/BDChannelHorizontal_V002.xml -->
     <!-- include includes/shapes/BDChannelHorizontalMulti_V002.xml -->
+    <!-- include includes/shapes/BDAccessVerticalL_V002.xml -->
+    <!-- include includes/shapes/BDAccessHorizontalL_V002.xml -->
+    <!-- include includes/shapes/AnnLineVertical_V002.xml -->
+    <!-- include includes/shapes/AnnLineHorizontal_V002.xml -->
     <!-- include includes/shapes/AnnDots_V002.xml -->
     <!-- include includes/shapes/AnnDotsVertical_V002.xml -->
     <!-- include includes/shapes/AnnGroupCFA_V002.xml -->
     <!-- include includes/shapes/BDUAgent_V002.xml -->
     <!-- include includes/shapes/BDUStorage_V002.xml -->
     <!-- include includes/shapes/BDQueue_V002.xml -->
+    <!-- include includes/shapes/BDStructureVariance_V002.xml -->
     <!-- include includes/shapes/BDAccessDirect_V002.xml -->
     <!-- include includes/shapes/BDModAccessDirect_V002.xml -->
     <!-- include includes/shapes/BDChannelDirect_V002.xml -->
 
 <!-- old versions to keep compatibility -->
+    <!-- include includes/shapes/old/BDAgent_V002.xml -->
+    <!-- include includes/shapes/old/BDHumanAgent_V002.xml -->
 </Shapes>

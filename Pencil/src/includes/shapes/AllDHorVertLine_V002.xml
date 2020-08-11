@@ -99,6 +99,14 @@
                   this.setProperty("BOOLisHorizontal", new Bool(!currentIsHorizontal.value));
               </Impl>
           </Action>
+          <Action id="switchDirection" displayName="Switch direction">
+              <Impl>
+                  var arrowStyleStart = this.getProperty("ENUMarrowStyleStart");
+                  var arrowStyleEnd = this.getProperty("ENUMarrowStyleEnd");
+                  this.setProperty("ENUMarrowStyleStart", arrowStyleEnd);
+                  this.setProperty("ENUMarrowStyleEnd", arrowStyleStart);
+              </Impl>
+          </Action>
           <Action id="centerTextPos" displayName="Move text block to center">
               <Impl>
                   var p1 = this.getProperty("HNDLp1");
